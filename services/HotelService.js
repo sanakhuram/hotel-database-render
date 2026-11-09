@@ -5,20 +5,20 @@ class HotelService {
         this.client = db.sequelize;
     }
 
-    //Create a hotel using raw SQL
-    async create(name, location) {
-        sequelize.query('INSERT INTO hotels (Name, Location) VALUES (:Name, :Location)', {
-            replacements:
-            {
+// Create a hotel using raw SQL
+async create(name, location) {
+    const result = await sequelize.query(
+        'INSERT INTO Hotels (Name, Location) VALUES (:Name, :Location)',
+        {
+            replacements: {
                 Name: name,
                 Location: location
             }
-        }).then(result => {
-            return result
-        }).catch(err => {
-            return (err)
-        })
-    }
+        }
+    );
+
+    return result;
+}
 
     //Get all hotels using raw SQL
     async get() {
