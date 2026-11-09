@@ -61,7 +61,7 @@ async create(name, location) {
 
     //Delete a hotel using raw SQL
     async deleteHotel(hotelId) {
-        await sequelize.query('DELETE FROM hotels WHERE id = :hotelId', {
+        await sequelize.query('DELETE FROM Hotels WHERE id = :hotelId', {
             replacements:
             {
                 hotelId: hotelId
