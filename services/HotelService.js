@@ -60,18 +60,18 @@ async create(name, location) {
     }
 
     //Delete a hotel using raw SQL
-    async deleteHotel(hotelId) {
-        await sequelize.query('DELETE FROM Hotels WHERE id = :hotelId', {
-            replacements:
-            {
+async deleteHotel(hotelId) {
+    const result = await sequelize.query(
+        'DELETE FROM Hotels WHERE id = :hotelId',
+        {
+            replacements: {
                 hotelId: hotelId
             }
-        }).then(result => {
-            return result
-        }).catch(err => {
-            return (err)
-        })
-    }
+        }
+    );
+
+    return result;
+}
 
     //Rate a hotel using raw SQL
     async makeARate(userId, hotelId, value) {

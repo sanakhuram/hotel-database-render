@@ -1,0 +1,170 @@
+app.js:2: trailing whitespace.
+[32m+[m[41m[m
+app.js:5: trailing whitespace.
+[32m+[m[32m//require('./redis');[m[41m[m
+models/index.js:6: trailing whitespace.
+[32m+[m[41m[m
+models/index.js:12: trailing whitespace.
+[32m+[m[32m  port: process.env.DB_PORT,[m[41m[m
+models/index.js:14: trailing whitespace.
+[32m+[m[32m  dialectModule: require('mysql2'),[m[41m[m
+models/index.js:15: trailing whitespace.
+[32m+[m[32mdialectOptions: {[m[41m[m
+models/index.js:16: trailing whitespace.
+[32m+[m[32m  ssl: {[m[41m[m
+models/index.js:17: trailing whitespace.
+[32m+[m[32m    ca: fs.readFileSync([m[41m[m
+models/index.js:18: trailing whitespace.
+[32m+[m[32m      path.join(__dirname, '..', 'ca.pem'),[m[41m[m
+models/index.js:19: trailing whitespace.
+[32m+[m[32m      'utf8'[m[41m[m
+models/index.js:20: trailing whitespace.
+[32m+[m[32m    ),[m[41m[m
+models/index.js:21: trailing whitespace.
+[32m+[m[32m    rejectUnauthorized: true[m[41m[m
+models/index.js:22: trailing whitespace.
+[32m+[m[32m  }[m[41m[m
+models/index.js:23: trailing whitespace.
+[32m+[m[32m}[m[41m[m
+models/index.js:25: trailing whitespace.
+[32m+[m[41m[m
+models/reservation.js:3: trailing whitespace.
+[32m+[m[32m        //start date validation[m[41m[m
+models/reservation.js:4: trailing whitespace.
+[32m+[m[32m        StartDate: {[m[41m[m
+models/reservation.js:5: trailing whitespace.
+[32m+[m[32m        type:  Sequelize.DataTypes.DATE,[m[41m[m
+models/reservation.js:6: trailing whitespace.
+[32m+[m[32m        validate: {[m[41m[m
+models/reservation.js:7: trailing whitespace.
+[32m+[m[32m            bothDatesProvided(value){[m[41m[m
+models/reservation.js:8: trailing whitespace.
+[32m+[m[32m                if (value && !this.EndDate){[m[41m[m
+models/reservation.js:9: trailing whitespace.
+[32m+[m[32m                    throw new Error("End date must be provided")[m[41m[m
+models/reservation.js:10: trailing whitespace.
+[32m+[m[32m                }[m[41m[m
+models/reservation.js:11: trailing whitespace.
+[32m+[m[32m            }[m[41m[m
+models/reservation.js:12: trailing whitespace.
+[32m+[m[41m[m
+models/reservation.js:13: trailing whitespace.
+[32m+[m[32m            }[m[41m[m
+models/reservation.js:14: trailing whitespace.
+[32m+[m[32m        },[m[41m[m
+models/reservation.js:15: trailing whitespace.
+[32m+[m[32m// End date validation[m[41m[m
+models/reservation.js:16: trailing whitespace.
+[32m+[m[32m        EndDate: {[m[41m[m
+models/reservation.js:17: trailing whitespace.
+[32m+[m[32m            type: Sequelize.DataTypes.DATE,[m[41m[m
+models/reservation.js:18: trailing whitespace.
+[32m+[m[32m            validate: {[m[41m[m
+models/reservation.js:19: trailing whitespace.
+[32m+[m[32m                bothDatesProvided(value) {[m[41m[m
+models/reservation.js:20: trailing whitespace.
+[32m+[m[32m                    if (value && !this.StartDate) {[m[41m[m
+models/reservation.js:21: trailing whitespace.
+[32m+[m[32m                        throw new Error("Start date must be provided");[m[41m[m
+models/reservation.js:22: trailing whitespace.
+[32m+[m[32m                    }[m[41m[m
+models/reservation.js:23: trailing whitespace.
+[32m+[m[41m[m
+models/reservation.js:24: trailing whitespace.
+[32m+[m[32m                    },[m[41m[m
+models/reservation.js:25: trailing whitespace.
+[32m+[m[41m                    [m
+models/reservation.js:26: trailing whitespace.
+[32m+[m[32m        endDateAfterStartDate(value) {[m[41m[m
+models/reservation.js:27: trailing whitespace.
+[32m+[m[32m        if (value && this.StartDate) {[m[41m[m
+models/reservation.js:28: trailing whitespace.
+[32m+[m[32m            const startDate = new Date(this.StartDate);[m[41m[m
+models/reservation.js:29: trailing whitespace.
+[32m+[m[32m            const endDate = new Date(value);[m[41m[m
+models/reservation.js:30: trailing whitespace.
+[32m+[m[41m[m
+models/reservation.js:31: trailing whitespace.
+[32m+[m[32m            const oneDay = 24 * 60 * 60 * 1000;[m[41m[m
+models/reservation.js:32: trailing whitespace.
+[32m+[m[41m[m
+models/reservation.js:33: trailing whitespace.
+[32m+[m[32m            if (endDate - startDate < oneDay) {[m[41m[m
+models/reservation.js:34: trailing whitespace.
+[32m+[m[32m                throw new Error ([m[41m[m
+models/reservation.js:35: trailing whitespace.
+[32m+[m[32m                    "End date must be at least 1 day after start date"[m[41m[m
+models/reservation.js:36: trailing whitespace.
+[32m+[m[32m                );[m[41m[m
+models/reservation.js:37: trailing whitespace.
+[32m+[m[32m            }[m[41m[m
+models/reservation.js:38: trailing whitespace.
+[32m+[m[32m        }[m[41m[m
+models/reservation.js:39: trailing whitespace.
+[32m+[m[32m    }[m[41m[m
+models/reservation.js:40: trailing whitespace.
+[32m+[m[32m                }[m[41m[m
+models/reservation.js:41: trailing whitespace.
+[32m+[m[32m            },[m[41m[m
+models/reservation.js:42: trailing whitespace.
+[32m+[m[41m[m
+models/reservation.js:43: trailing whitespace.
+[32m+[m[32m    },[m[41m[m
+models/reservation.js:44: trailing whitespace.
+[32m+[m[41m[m
+models/reservation.js:45: trailing whitespace.
+[32m+[m[32m    {[m[41m[m
+package-lock.json:24: trailing whitespace.
+[32m+[m[32m        "redis": "^6.3.1",[m[41m[m
+package-lock.json:78: trailing whitespace.
+[32m+[m[32m    "node_modules/@redis/bloom": {[m[41m[m
+package-lock.json:79: trailing whitespace.
+[32m+[m[32m      "version": "6.3.1",[m[41m[m
+package-lock.json:80: trailing whitespace.
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@redis/bloom/-/bloom-6.3.1.tgz",[m[41m[m
+package-lock.json:81: trailing whitespace.
+[32m+[m[32m      "integrity": "sha512-dpF9j2yJDoPzSCaZn0MSB3xzmnXQVJeTSAWJcQVcgbmluwhpFeemmII0cF1t+WYfoVS+shEFq79+MmUItgzJLg==",[m[41m[m
+package-lock.json:82: trailing whitespace.
+[32m+[m[32m      "license": "MIT",[m[41m[m
+package-lock.json:83: trailing whitespace.
+[32m+[m[32m      "engines": {[m[41m[m
+package-lock.json:84: trailing whitespace.
+[32m+[m[32m        "node": ">= 20.0.0"[m[41m[m
+package-lock.json:85: trailing whitespace.
+[32m+[m[32m      },[m[41m[m
+package-lock.json:86: trailing whitespace.
+[32m+[m[32m      "peerDependencies": {[m[41m[m
+package-lock.json:87: trailing whitespace.
+[32m+[m[32m        "@redis/client": "^6.3.1"[m[41m[m
+package-lock.json:88: trailing whitespace.
+[32m+[m[32m      }[m[41m[m
+package-lock.json:89: trailing whitespace.
+[32m+[m[32m    },[m[41m[m
+package-lock.json:90: trailing whitespace.
+[32m+[m[32m    "node_modules/@redis/client": {[m[41m[m
+package-lock.json:91: trailing whitespace.
+[32m+[m[32m      "version": "6.3.1",[m[41m[m
+package-lock.json:92: trailing whitespace.
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@redis/client/-/client-6.3.1.tgz",[m[41m[m
+package-lock.json:93: trailing whitespace.
+[32m+[m[32m      "integrity": "sha512-masbfVKULdoAofwddepZxRhWa4w6zvBHn6TRn90TRPrRkVIlGCur3pFqwWaCbMxtYI9twepkz63e/T/tEH8GjA==",[m[41m[m
+package-lock.json:94: trailing whitespace.
+[32m+[m[32m      "license": "MIT",[m[41m[m
+package-lock.json:95: trailing whitespace.
+[32m+[m[32m      "engines": {[m[41m[m
+package-lock.json:96: trailing whitespace.
+[32m+[m[32m        "node": ">= 20.0.0"[m[41m[m
+package-lock.json:97: trailing whitespace.
+[32m+[m[32m      },[m[41m[m
+package-lock.json:98: trailing whitespace.
+[32m+[m[32m      "peerDependencies": {[m[41m[m
+package-lock.json:99: trailing whitespace.
+[32m+[m[32m        "@node-rs/xxhash": "^1.1.0",[m[41m[m
+package-lock.json:100: trailing whitespace.
+[32m+[m[32m        "@opentelemetry/api": ">=1 <2"[m[41m[m
+package-lock.json:101: trailing whitespace.
+[32m+[m[32m      },[m[41m[m
+package-lock.json:102: trailing whitespace.
+[32m+[m[32m      "peerDependenciesMeta": {[m[41m[m
+package-lock.json:103: trailing whitespace.
+[3
